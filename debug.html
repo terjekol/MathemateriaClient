@@ -1,0 +1,472 @@
+<html>
+
+<body>
+    <script>
+        var data = getData();
+        var i;
+        for (i in data.location) {
+            var address = data.location[i];
+            console.log(shorten(address));
+        }
+
+        function shorten(address){
+            var fields = address.address_components;
+            var i;
+            var obj = {};
+            for(i in fields){
+                obj[fields[i].types[0]]=fields[i].long_name;
+            }
+            return obj;
+        }
+
+        function getData() {
+            var myData =
+                {
+                    "location": [
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Unnamed Road",
+                                    "short_name": "Unnamed Road",
+                                    "types": [
+                                        "route"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Skedsmokorset",
+                                    "short_name": "Skedsmokorset",
+                                    "types": [
+                                        "postal_town"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Skedsmo",
+                                    "short_name": "Skedsmo",
+                                    "types": [
+                                        "administrative_area_level_2",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Akershus",
+                                    "short_name": "Akershus",
+                                    "types": [
+                                        "administrative_area_level_1",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "2020",
+                                    "short_name": "2020",
+                                    "types": [
+                                        "postal_code"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "Unnamed Road, 2020 Skedsmokorset, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.0043267,
+                                        "lng": 11.001376
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9995511,
+                                        "lng": 10.9987862
+                                    }
+                                },
+                                "location": {
+                                    "lat": 60.0017598,
+                                    "lng": 11.0013495
+                                },
+                                "location_type": "GEOMETRIC_CENTER",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.0043267,
+                                        "lng": 11.001430080292
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9995511,
+                                        "lng": 10.998732119708
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJ_ZUCarF7QUYRHCz5-3Q6k1Q",
+                            "types": [
+                                "route"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "2020",
+                                    "short_name": "2020",
+                                    "types": [
+                                        "postal_code"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Skedsmokorset",
+                                    "short_name": "Skedsmokorset",
+                                    "types": [
+                                        "postal_town"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Skedsmo",
+                                    "short_name": "Skedsmo",
+                                    "types": [
+                                        "administrative_area_level_2",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Akershus",
+                                    "short_name": "Akershus",
+                                    "types": [
+                                        "administrative_area_level_1",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "2020 Skedsmokorset, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.0450965,
+                                        "lng": 11.0695075
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9823472,
+                                        "lng": 10.9662844
+                                    }
+                                },
+                                "location": {
+                                    "lat": 60.0136974,
+                                    "lng": 11.0040763
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.0450965,
+                                        "lng": 11.0695075
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9823472,
+                                        "lng": 10.9662844
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJD-b7WL97QUYR5ikRjvGt6mQ",
+                            "types": [
+                                "postal_code"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Skedsmokorset",
+                                    "short_name": "Skedsmokorset",
+                                    "types": [
+                                        "postal_town"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Skedsmo",
+                                    "short_name": "Skedsmo",
+                                    "types": [
+                                        "administrative_area_level_2",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Akershus",
+                                    "short_name": "Akershus",
+                                    "types": [
+                                        "administrative_area_level_1",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "2020",
+                                    "short_name": "2020",
+                                    "types": [
+                                        "postal_code"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "2020 Skedsmokorset, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.0450965,
+                                        "lng": 11.0695075
+                                    },
+                                    "southwest": {
+                                        "lat": 59.979381,
+                                        "lng": 10.9662844
+                                    }
+                                },
+                                "location": {
+                                    "lat": 60.0121557,
+                                    "lng": 11.0223753
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.0450965,
+                                        "lng": 11.0695075
+                                    },
+                                    "southwest": {
+                                        "lat": 59.979381,
+                                        "lng": 10.9662844
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJD-b7WL97QUYRfyPpdutAyt0",
+                            "types": [
+                                "postal_town"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Skedsmo Municipality",
+                                    "short_name": "Skedsmo Municipality",
+                                    "types": [
+                                        "administrative_area_level_2",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Akershus",
+                                    "short_name": "Akershus",
+                                    "types": [
+                                        "administrative_area_level_1",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "Skedsmo Municipality, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.0450978,
+                                        "lng": 11.1784382
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9374133,
+                                        "lng": 10.9337341
+                                    }
+                                },
+                                "location": {
+                                    "lat": 59.9929184,
+                                    "lng": 11.0421988
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.0450978,
+                                        "lng": 11.1784382
+                                    },
+                                    "southwest": {
+                                        "lat": 59.9374133,
+                                        "lng": 10.9337341
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJbR8HOnB8QUYRfjwIvys5aCM",
+                            "types": [
+                                "administrative_area_level_2",
+                                "political"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Akershus",
+                                    "short_name": "Akershus",
+                                    "types": [
+                                        "administrative_area_level_1",
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "Akershus, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.6051476,
+                                        "lng": 11.9269773
+                                    },
+                                    "southwest": {
+                                        "lat": 59.4718821,
+                                        "lng": 10.3284666
+                                    }
+                                },
+                                "location": {
+                                    "lat": 60.0000202,
+                                    "lng": 11.3690302
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.6051476,
+                                        "lng": 11.9269773
+                                    },
+                                    "southwest": {
+                                        "lat": 59.4718821,
+                                        "lng": 10.3284666
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJKRWbpZZ-QUYRMByJQaHlAAM",
+                            "types": [
+                                "administrative_area_level_1",
+                                "political"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Oslo Metropolitan Area",
+                                    "short_name": "Oslo Metropolitan Area",
+                                    "types": [
+                                        "political"
+                                    ]
+                                },
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "Oslo Metropolitan Area, Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 60.6051476,
+                                        "lng": 11.9460045
+                                    },
+                                    "southwest": {
+                                        "lat": 59.2981764,
+                                        "lng": 10.2900617
+                                    }
+                                },
+                                "location": {
+                                    "lat": 59.9472465,
+                                    "lng": 10.8891227
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 60.6051476,
+                                        "lng": 11.9460045
+                                    },
+                                    "southwest": {
+                                        "lat": 59.2981764,
+                                        "lng": 10.2900617
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJRSHW_A1yQUYRmInB4KmyVc8",
+                            "types": [
+                                "political"
+                            ]
+                        },
+                        {
+                            "address_components": [
+                                {
+                                    "long_name": "Norway",
+                                    "short_name": "NO",
+                                    "types": [
+                                        "country",
+                                        "political"
+                                    ]
+                                }
+                            ],
+                            "formatted_address": "Norway",
+                            "geometry": {
+                                "bounds": {
+                                    "northeast": {
+                                        "lat": 71.3078,
+                                        "lng": 31.3549999
+                                    },
+                                    "southwest": {
+                                        "lat": 57.8097,
+                                        "lng": 4.0649
+                                    }
+                                },
+                                "location": {
+                                    "lat": 60.472024,
+                                    "lng": 8.468946
+                                },
+                                "location_type": "APPROXIMATE",
+                                "viewport": {
+                                    "northeast": {
+                                        "lat": 71.3078,
+                                        "lng": 31.3549999
+                                    },
+                                    "southwest": {
+                                        "lat": 57.8097,
+                                        "lng": 4.0649
+                                    }
+                                }
+                            },
+                            "place_id": "ChIJv-VNj0VoEkYRK9BkuJ07sKE",
+                            "types": [
+                                "country",
+                                "political"
+                            ]
+                        }
+                    ]
+                };
+            return myData;
+        }    
+    </script>
+</body>
+
+</html>
